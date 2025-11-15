@@ -1,0 +1,24 @@
+my:
+  name: 张三
+  address:
+    city: BeiJIng
+    post-code: 100010
+collect:
+  hobby:
+    - 篮球
+    - 音乐
+    - 书籍
+  addrs:
+    - city: ShangHai
+      post-code: 200010
+    - city: GuangZhou
+      post-code: 500010
+    - city: NanJinG
+      post-code: 300010
+  map:
+    key1: 1
+    key2: 2
+
+app:
+  app-name: myapp
+  author: 权
