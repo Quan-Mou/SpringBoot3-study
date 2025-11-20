@@ -1,0 +1,4 @@
+spring:
+  mvc:
+    resource:
+      add-mappings: false
