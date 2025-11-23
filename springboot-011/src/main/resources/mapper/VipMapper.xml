@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.quan.springboot.mapper.VipMapper">
-  <resultMap id="BaseResultMap" type="com.quan.springboot.domain.TVip">
+  <resultMap id="BaseResultMap" type="com.quan.springboot.entity.Vip">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="card_number" jdbcType="CHAR" property="cardNumber" />
     <result column="birth" jdbcType="CHAR" property="birth" />
   </resultMap>
-
   <sql id="Base_Column_List">
     id, `name`, card_number, birth
   </sql>
-
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
@@ -19,17 +17,20 @@
     where id = #{id,jdbcType=BIGINT}
   </select>
 
+  <select id="list" resultType="com.quan.springboot.entity.Vip">
+    select * from t_vip
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from t_vip
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.quan.springboot.entity.Vip" useGeneratedKeys="true">
     insert into t_vip (`name`, card_number, birth
       )
     values (#{name,jdbcType=VARCHAR}, #{cardNumber,jdbcType=CHAR}, #{birth,jdbcType=CHAR}
       )
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id"  useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.quan.springboot.entity.Vip" useGeneratedKeys="true">
     insert into t_vip
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="name != null">
@@ -54,7 +55,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.quan.springboot.entity.Vip">
     update t_vip
     <set>
       <if test="name != null">
@@ -69,7 +70,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" >
+  <update id="updateByPrimaryKey" parameterType="com.quan.springboot.entity.Vip">
     update t_vip
     set `name` = #{name,jdbcType=VARCHAR},
       card_number = #{cardNumber,jdbcType=CHAR},
