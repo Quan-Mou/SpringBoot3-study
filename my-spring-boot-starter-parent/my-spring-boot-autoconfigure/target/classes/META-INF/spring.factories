@@ -1,0 +1,8 @@
+## Auto Configuration
+#org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+# com.quan.autoconfigure.MyAutoConfiguration,\
+# com.quan.autoconfigure.AdvancedAutoConfiguration
+#
+## Failure Analyzer（可选）
+##org.springframework.boot.diagnostics.FailureAnalyzer=\
+##com.quan.autoconfigure.MyFailureAnalyzer

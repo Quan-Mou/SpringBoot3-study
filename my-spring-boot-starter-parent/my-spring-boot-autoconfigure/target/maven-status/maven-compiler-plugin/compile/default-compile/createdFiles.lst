@@ -1,0 +1,5 @@
+META-INF/spring-configuration-metadata.json
+com/quan/autoconfigure/MyAutoConfiguration.class
+com/quan/autoconfigure/MyProperties$Cache.class
+com/quan/autoconfigure/MyService.class
+com/quan/autoconfigure/MyProperties.class

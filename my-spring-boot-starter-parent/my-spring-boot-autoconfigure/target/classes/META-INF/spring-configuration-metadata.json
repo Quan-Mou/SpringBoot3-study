@@ -1,0 +1,57 @@
+{
+  "groups": [
+    {
+      "name": "my.starter",
+      "type": "com.quan.autoconfigure.MyProperties",
+      "sourceType": "com.quan.autoconfigure.MyProperties"
+    },
+    {
+      "name": "my.starter.cache",
+      "type": "com.quan.autoconfigure.MyProperties$Cache",
+      "sourceType": "com.quan.autoconfigure.MyProperties",
+      "sourceMethod": "getCache()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "my.starter.cache.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.quan.autoconfigure.MyProperties$Cache",
+      "defaultValue": true
+    },
+    {
+      "name": "my.starter.cache.max-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.quan.autoconfigure.MyProperties$Cache",
+      "defaultValue": 100
+    },
+    {
+      "name": "my.starter.cache.ttl",
+      "type": "java.lang.Long",
+      "sourceType": "com.quan.autoconfigure.MyProperties$Cache",
+      "defaultValue": 3600
+    },
+    {
+      "name": "my.starter.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否启用 Starter",
+      "sourceType": "com.quan.autoconfigure.MyProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "my.starter.name",
+      "type": "java.lang.String",
+      "description": "服务名称",
+      "sourceType": "com.quan.autoconfigure.MyProperties",
+      "defaultValue": "default-service"
+    },
+    {
+      "name": "my.starter.timeout",
+      "type": "java.lang.Integer",
+      "description": "超时时间（毫秒）",
+      "sourceType": "com.quan.autoconfigure.MyProperties",
+      "defaultValue": 3000
+    }
+  ],
+  "hints": []
+}

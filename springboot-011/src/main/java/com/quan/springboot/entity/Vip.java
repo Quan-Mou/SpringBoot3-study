@@ -2,11 +2,13 @@ package com.quan.springboot.entity;
 
 import java.io.Serializable;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * t_vip
  */
 @Data
+@NoArgsConstructor
 public class Vip implements Serializable {
     private Long id;
 
